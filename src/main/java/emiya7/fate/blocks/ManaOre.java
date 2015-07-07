@@ -3,10 +3,10 @@ package emiya7.fate.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class ManaBlock extends Block{
+public class ManaOre extends Block{
 
-	public ManaBlock(Material p_i45394_1_) {
-		super(p_i45394_1_);
+	public ManaOre(Material material) {
+		super(material);
 		// TODO Auto-generated constructor stub
 	}
 
