@@ -1,0 +1,3 @@
+[submodule "eclipse"]
+	path = eclipse
+	url = ../mcmod.git
