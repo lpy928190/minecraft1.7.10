@@ -1,0 +1,14 @@
+/.gradle/
+/.settings/
+/bin/
+/build/
+/gradle/
+/CREDITS-fml.txt
+*.classpath
+*.project
+*.gradle
+/fgow-1.0.3.jar
+/forge-1.7.10-10.13.4.1448-1.7.10-changelog.txt
+/gradlew
+/gradlew.bat
+*.txt
