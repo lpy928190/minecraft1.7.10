@@ -16,6 +16,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import emiya7.fate.blocks.ManaOre;
 import emiya7.fate.items.ManaIgnot;
 import emiya7.fate.items.tools.ManaCollector;
+import emiya7.fate.items.tools.ManaWand;
 import emiya7.fate.material.ManaOreMaterial;
 
 @Mod(modid="fate", name="Fate World", version="0.0.1 Beta")
@@ -27,6 +28,7 @@ public class FateMain {
 	/** Items */
 	public static Item manaIgnot;
 	public static Item manaCollector;
+	public static Item manaWand;
 	
 	/** Material */
 	public static Material manaOreMaterial;
@@ -49,6 +51,10 @@ public class FateMain {
 		manaCollector.setUnlocalizedName("ManaCollector").setTextureName("fate:item_mana_collector")
 			.setCreativeTab(CreativeTabs.tabTools).setHarvestLevel("ManaCollector", 0);
 		GameRegistry.registerItem(manaCollector, "manaCollector");
+		manaWand = new ManaWand();
+		manaWand.setUnlocalizedName("manaWand").setTextureName("fate:item_mana_wand")
+			.setCreativeTab(CreativeTabs.tabTools).setMaxDamage(100);
+		GameRegistry.registerItem(manaWand, "manaWand");
 	}
 	
 	private void initMaterial(){
