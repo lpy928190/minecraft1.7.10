@@ -53,7 +53,7 @@ public class ManaWand extends Item{
 					par3EntityPlayer.posX, par3EntityPlayer.posY + par3EntityPlayer.getEyeHeight(), par3EntityPlayer.posZ, par3EntityPlayer);
 			float angle = (par3EntityPlayer.rotationYaw/ 180F) * 3.141593F;
 			float angle2 = (-par3EntityPlayer.rotationPitch/ 180F) * 3.141593F;
-			int duration = this.getMaxItemUseDuration(par1ItemStack) - par4; //计算真正的使用持续时间
+			int duration = this.getMaxItemUseDuration(par1ItemStack) - par4; //计算真正的使用持续时间,par4表示剩余时间
 			float speed = duration > 50 ? 5f : 0.5f+0.09f*duration;
 			entity.motionY = speed * MathHelper.sin(angle2);
 			entity.motionX = speed * MathHelper.cos(angle2) * -MathHelper.sin(angle);
@@ -63,6 +63,6 @@ public class ManaWand extends Item{
 	}
 
 	public int getMaxItemUseDuration(ItemStack par1ItemStack) {
-		return 100000; //最大使用时间为100000tick - 这个数多少都行,别爆了Int32的上限就好...
+		return 1000; //最大使用时间为100000tick - 这个数多少都行,别爆了Int32的上限就好...
 	}
 }

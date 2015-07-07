@@ -7,6 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -76,6 +77,7 @@ public class FateMain {
 	public void load(FMLInitializationEvent event){
 		initRecipe();
 		GameRegistry.addSmelting(manaOre, new ItemStack(manaIgnot), 1f);
+		MinecraftForge.EVENT_BUS.register(new emiya7.fate.EventHandler());
 	}
 	 
 	@EventHandler
