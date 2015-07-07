@@ -8,6 +8,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import emiya7.fate.blocks.ManaBlock;
 
 @Mod(modid="fate", name="Fate World", version="1.0.0")
@@ -22,7 +23,7 @@ public class FateMain {
 		.setHardness(3.0F).setLightLevel(1.0F).setResistance(100F)
 		.setStepSound(Block.soundTypeStone).setCreativeTab(CreativeTabs.tabBlock)
 		.setHarvestLevel("pickaxe", 3);
-		
+		GameRegistry.registerBlock(manaBlock,"manaBlock");
 	}
 	
 	@EventHandler
