@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 
 import com.google.common.collect.Sets;
+
+import emiya7.fate.FateMain;
 
 public class ManaCollector extends ItemTool{
 
@@ -19,6 +22,10 @@ public class ManaCollector extends ItemTool{
 		//调用基类的构造函数,参数分别是攻击实体(Entity)造成的伤害,工具材质(ToolMaterial),能被这种工具加速挖掘的砖块.
 		//其中,第三个参数是原版MC用的,使用Forge的可以无视.
 		super(100f, ToolMaterial.EMERALD, new HashSet());
+		setUnlocalizedName("ManaCollector");
+		setTextureName("fate:item_mana_collector");
+		setCreativeTab(FateMain.creativeTab);
+		setHarvestLevel("ManaCollector", 0);
 	}
 
 	//获取对砖块的挖掘速度

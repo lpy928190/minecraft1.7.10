@@ -1,5 +1,7 @@
 package emiya7.fate.items.tools;
 
+import emiya7.fate.FateMain;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,6 +12,14 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class ManaWand extends Item{
+	
+	public ManaWand(){
+		setUnlocalizedName("manaWand");
+		setTextureName("fate:item_mana_wand");
+		setCreativeTab(FateMain.creativeTab);
+		setMaxDamage(100);
+	}
+	
 	public boolean hitEntity(ItemStack usingItem,EntityLivingBase attacked,EntityLivingBase attacktor){
 		usingItem.damageItem(1, attacktor);
 		if (attacktor.worldObj.isRemote){
